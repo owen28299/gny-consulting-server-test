@@ -5,8 +5,10 @@ const express = require('express'),
       PORT    = process.env.PORT || 3000
       ;
 
+var counter = 1;
+
 app.get('/api/test', (req,res) => {
-  res.json({sucess: true});
+  res.json({counter: counter});
 });
 
 app.listen(PORT, () =>{
